@@ -5,10 +5,10 @@ const port = 3000
 
 const requestHandler = (request, res) => {
   console.log(request.url)
-  //  res.end('Hello Node.js Server!')
 
   fs.createReadStream('./public/shift-jis.html')
     .pipe(res);
+
 }
 
 const server = http.createServer(requestHandler)
